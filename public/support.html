@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Wellion</title>
+  <meta name="description" content="Get help with Wellion. Contact our support team for assistance." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { sand:'#F7F4F1', sandDark:'#f2ece7', charcoal:'#181e24', charcoalLight:'#4c5d6f', vitality:'#f97316', vitalityLight:'#feeade', sage:'#e5ebe7', sageDark:'#577562' },
+        fontFamily: { display:['DM Serif Display','serif'], body:['DM Sans','sans-serif'] }
+      }}
+    }
+  </script>
+  <style>
+    body { font-family:'DM Sans',sans-serif; background:#F7F4F1; color:#1F2937; }
+    .glass-nav { background:rgba(247,244,241,0.75); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(229,231,235,0.5); }
+    .glass-card { background:rgba(255,255,255,0.55); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.6); }
+    .btn-primary { background:linear-gradient(135deg,#f97316,#ea580c); color:#fff; padding:16px 40px; border-radius:14px; font-weight:600; font-size:1.1rem; display:inline-flex; align-items:center; gap:10px; text-decoration:none; transition:all 0.3s ease; box-shadow:0 4px 20px rgba(249,115,22,0.3); }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(249,115,22,0.4); }
+  </style>
+</head>
+<body>
+  <nav class="glass-nav fixed top-0 left-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3"><img src="/wellion-logo.png" alt="Wellion" width="40" height="40" /><span class="font-display text-xl text-charcoal">Wellion</span></a>
+      <div class="flex items-center gap-6 text-sm"><a href="/" class="text-charcoalLight hover:text-vitality transition">Home</a><a href="/privacy.html" class="text-charcoalLight hover:text-vitality transition">Privacy</a><a href="/terms.html" class="text-charcoalLight hover:text-vitality transition">Terms</a></div>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-24 px-6 min-h-screen flex items-center justify-center">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="glass-card rounded-3xl p-12 md:p-16">
+        <div class="w-20 h-20 rounded-2xl bg-vitalityLight flex items-center justify-center mx-auto mb-8">
+          <svg class="w-10 h-10 text-vitality" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
+          </svg>
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl text-charcoal mb-4">Need Help?</h1>
+        <p class="text-charcoalLight text-lg leading-relaxed mb-10">
+          Our support team is here to help you with anything related to Wellion — from setup questions to account issues.
+        </p>
+        <a href="mailto:support@wellion.app" class="btn-primary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          Contact Support
+        </a>
+        <p class="text-sm text-charcoalLight mt-6">support@wellion.app</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-8 px-6 border-t border-gray-200/50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3"><img src="/wellion-logo.png" alt="Wellion" width="28" height="28" /><span class="font-display text-charcoal">Wellion</span></div>
+      <div class="flex items-center gap-6 text-sm text-charcoalLight"><a href="/privacy.html" class="hover:text-vitality transition">Privacy</a><a href="/terms.html" class="hover:text-vitality transition">Terms</a><a href="/support.html" class="hover:text-vitality transition">Support</a></div>
+      <p class="text-xs text-gray-400">© 2025 Wellion</p>
+    </div>
+  </footer>
+</body>
+</html>
