@@ -6,37 +6,41 @@
   <title>Terms &amp; Conditions — Wellion</title>
   <meta name="description" content="Wellion Terms &amp; Conditions. Understand the terms for using the Wellion health tracking app." />
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { sand:'#F7F4F1', sandDark:'#f2ece7', charcoal:'#181e24', charcoalLight:'#4c5d6f', vitality:'#f97316', vitalityLight:'#feeade', sage:'#e5ebe7', sageDark:'#577562' },
-        fontFamily: { display:['DM Serif Display','serif'], body:['DM Sans','sans-serif'] }
+        colors: { sand:'#F5FBF6', sandDark:'#DAF1DE', charcoal:'#12211D', charcoalLight:'#5B6E67', vitality:'#235347', vitalityLight:'#E4F0EA', sage:'#DAF1DE', sageDark:'#235347' },
+        fontFamily: { display:['Fraunces','serif'], body:['Plus Jakarta Sans','sans-serif'] }
       }}
     }
   </script>
   <style>
-    body { font-family:'DM Sans',sans-serif; background:#F7F4F1; color:#1F2937; }
-    .glass-nav { background:rgba(247,244,241,0.75); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(229,231,235,0.5); }
-    .glass-card { background:rgba(255,255,255,0.55); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.6); }
+    html { overflow-x: hidden; }
+    body { font-family:'Plus Jakarta Sans',sans-serif; background:#F5FBF6; color:#12211D; overflow-x: hidden; }
+    .glass-nav { background:rgba(245,251,246,0.75); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(220,233,225,0.6); }
+    .glass-card { background:rgba(255,255,255,0.6); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.7); }
   </style>
 </head>
 <body>
   <nav class="glass-nav fixed top-0 left-0 w-full z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3"><img src="./wellion-logo.png" alt="Wellion" width="40" height="40" /><span class="font-display text-xl text-charcoal">Wellion</span></a>
-      <div class="flex items-center gap-6 text-sm"><a href="index.html" class="text-charcoalLight hover:text-vitality transition">Home</a><a href="privacy.html" class="text-charcoalLight hover:text-vitality transition">Privacy</a><a href="support.html" class="text-charcoalLight hover:text-vitality transition">Support</a></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between flex-wrap gap-2">
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3"><img src="./logo.png" alt="Wellion" width="40" height="40" class="w-8 h-8 sm:w-10 sm:h-10" /><span class="font-display text-lg sm:text-xl text-charcoal">Wellion</span></a>
+      <div class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm"><a href="index.html" class="text-charcoalLight hover:text-vitality transition">Home</a><a href="privacy.html" class="text-charcoalLight hover:text-vitality transition">Privacy</a><a href="support.html" class="text-charcoalLight hover:text-vitality transition">Support</a></div>
     </div>
   </nav>
 
   <main class="pt-32 pb-24 px-6">
     <div class="max-w-3xl mx-auto">
-      <div class="glass-card rounded-3xl p-10 md:p-14">
+      <div>
         <div class="inline-block bg-vitalityLight text-vitality text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Legal</div>
-        <h1 class="font-display text-4xl md:text-5xl text-charcoal mb-6">Terms &amp; Conditions</h1>
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Terms &amp; Conditions</h1>
         <p class="text-charcoalLight mb-8">Effective as of 2025-12-03</p>
 
-        <div class="prose max-w-none text-charcoalLight leading-relaxed space-y-6">
+        <div class="prose max-w-none text-charcoalLight leading-relaxed space-y-6 break-words">
 
           <p>These terms and conditions apply to the Wellion app (hereby referred to as "Application") for mobile devices that was created by Deep Saha (hereby referred to as "Service Provider") as a freemium service with optional premium subscription.</p>
 
@@ -110,9 +114,9 @@
 
   <footer class="py-8 px-6 border-t border-gray-200/50">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3"><img src="./wellion-logo.png" alt="Wellion" width="28" height="28" /><span class="font-display text-charcoal">Wellion</span></div>
+      <div class="flex items-center gap-3"><img src="./logo.png" alt="Wellion" width="28" height="28" /><span class="font-display text-charcoal">Wellion</span></div>
       <div class="flex items-center gap-6 text-sm text-charcoalLight"><a href="privacy.html" class="hover:text-vitality transition">Privacy</a><a href="terms.html" class="hover:text-vitality transition">Terms</a><a href="support.html" class="hover:text-vitality transition">Support</a></div>
-      <p class="text-xs text-gray-400">© 2025 Wellion</p>
+      <p class="text-xs text-gray-400">© 2026 Wellion</p>
     </div>
   </footer>
 </body>

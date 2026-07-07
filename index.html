@@ -12,28 +12,29 @@
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            sand: '#F7F4F1',
-            sandDark: '#f2ece7',
-            charcoal: '#181e24',
-            charcoalLight: '#4c5d6f',
-            vitality: '#f97316',
-            vitalityLight: '#feeade',
-            coral: '#ee5d6c',
-            coralLight: '#FFE4E6',
-            sage: '#e5ebe7',
-            sageDark: '#577562',
-            glass: 'rgba(249, 250, 251, 0.85)',
-            success: '#10B981',
+            ink: '#051F20',
+            inkDeep: '#0B2B26',
+            hero: '#163832',
+            primary: '#235347',
+            primaryLight: '#E4F0EA',
+            moss: '#8EB69B',
+            background: '#F5FBF6',
+            mint: '#DAF1DE',
+            accent: '#D9A441',
+            text: '#12211D',
+            textSecondary: '#5B6E67',
+            border: '#DCE9E1',
+            success: '#5E9C7C',
           },
           fontFamily: {
-            display: ['DM Serif Display', 'serif'],
-            body: ['DM Sans', 'sans-serif'],
+            display: ['Fraunces', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
           },
         },
       },
@@ -41,21 +42,22 @@
   </script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'DM Sans', sans-serif; background-color: #F7F4F1; color: #1F2937; }
+    html { overflow-x: hidden; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5FBF6; color: #12211D; overflow-x: hidden; }
     .glass-card {
-      background: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.7);
     }
     .glass-nav {
-      background: rgba(247, 244, 241, 0.75);
+      background: rgba(245, 251, 246, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+      border-bottom: 1px solid rgba(220, 233, 225, 0.6);
     }
     .glass-dark {
-      background: rgba(24, 30, 36, 0.85);
+      background: rgba(11, 43, 38, 0.9);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255,255,255,0.08);
@@ -68,8 +70,8 @@
       pointer-events: none;
     }
     .hero-gradient {
-      background: radial-gradient(ellipse at 30% 20%, rgba(249,115,22,0.12) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 80%, rgba(238,93,108,0.08) 0%, transparent 50%);
+      background: radial-gradient(ellipse at 30% 20%, rgba(35,83,71,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(217,164,65,0.10) 0%, transparent 50%);
     }
     @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
     .float { animation: float 6s ease-in-out infinite; }
@@ -79,7 +81,7 @@
     .fade-up-d2 { animation-delay: 0.2s; }
     .fade-up-d3 { animation-delay: 0.3s; }
     .btn-primary {
-      background: linear-gradient(135deg, #f97316, #ea580c);
+      background: linear-gradient(135deg, #235347, #163832);
       color: #fff;
       padding: 14px 32px;
       border-radius: 14px;
@@ -90,13 +92,13 @@
       gap: 8px;
       text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 20px rgba(249,115,22,0.3);
+      box-shadow: 0 4px 20px rgba(35,83,71,0.3);
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(249,115,22,0.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(35,83,71,0.4); }
     .btn-secondary {
       background: rgba(255,255,255,0.6);
       backdrop-filter: blur(10px);
-      color: #f97316;
+      color: #235347;
       padding: 14px 32px;
       border-radius: 14px;
       font-weight: 600;
@@ -105,14 +107,14 @@
       align-items: center;
       gap: 8px;
       text-decoration: none;
-      border: 1.5px solid rgba(249,115,22,0.25);
+      border: 1.5px solid rgba(35,83,71,0.25);
       transition: all 0.3s ease;
     }
-    .btn-secondary:hover { background: rgba(254,234,222,0.7); transform: translateY(-2px); }
+    .btn-secondary:hover { background: rgba(228,240,234,0.7); transform: translateY(-2px); }
     .section-tag {
       display: inline-block;
-      background: rgba(249,115,22,0.1);
-      color: #f97316;
+      background: rgba(35,83,71,0.1);
+      color: #235347;
       padding: 6px 16px;
       border-radius: 50px;
       font-size: 0.8rem;
@@ -127,45 +129,45 @@
 
   <!-- NAV -->
   <nav class="glass-nav fixed top-0 left-0 w-full z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="./wellion-logo.png" alt="Wellion" width="40" height="40" />
-        <span class="font-display text-xl text-charcoal">Wellion</span>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <img src="./logo.png" alt="Wellion" width="40" height="40" class="w-8 h-8 sm:w-10 sm:h-10" />
+        <span class="font-display text-lg sm:text-xl text-text">Wellion</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="#features" class="text-sm font-medium text-charcoalLight hover:text-vitality transition">Features</a>
-        <a href="#premium" class="text-sm font-medium text-charcoalLight hover:text-vitality transition">Premium</a>
-        <a href="#privacy" class="text-sm font-medium text-charcoalLight hover:text-vitality transition">Privacy</a>
-        <a href="#faq" class="text-sm font-medium text-charcoalLight hover:text-vitality transition">FAQ</a>
+        <a href="#features" class="text-sm font-medium text-textSecondary hover:text-primary transition">Features</a>
+        <a href="#premium" class="text-sm font-medium text-textSecondary hover:text-primary transition">Premium</a>
+        <a href="#privacy" class="text-sm font-medium text-textSecondary hover:text-primary transition">Privacy</a>
+        <a href="#faq" class="text-sm font-medium text-textSecondary hover:text-primary transition">FAQ</a>
       </div>
-      <a href="#download" class="btn-primary text-sm" style="padding:10px 20px;">Download Free</a>
+      <a href="#download" class="btn-primary text-xs sm:text-sm flex-shrink-0" style="padding:8px 14px;">Download Free</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero-gradient relative min-h-screen flex items-center overflow-hidden pt-20">
-    <div class="gradient-blob w-96 h-96 bg-vitality top-10 -left-40" style="width:500px;height:500px;"></div>
-    <div class="gradient-blob bg-coral" style="width:400px;height:400px;bottom:40px;right:-100px;"></div>
+    <div class="gradient-blob w-96 h-96 bg-primary top-10 -left-40" style="width:500px;height:500px;"></div>
+    <div class="gradient-blob bg-accent" style="width:400px;height:400px;bottom:40px;right:-100px;"></div>
     <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
       <div class="fade-up">
         <div class="section-tag mb-6">Privacy-First Health Tracking</div>
-        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-charcoal leading-tight mb-6" style="line-height:1.1;">
-          Track your GLP-1 journey with <span class="text-vitality">clarity</span>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-text leading-tight mb-6" style="line-height:1.1;">
+          Track your GLP-1 journey with <span class="text-primary">clarity</span>
         </h1>
-        <p class="text-lg text-charcoalLight leading-relaxed mb-8 max-w-lg">
+        <p class="text-lg text-textSecondary leading-relaxed mb-8 max-w-lg">
           Log medication, weight, and daily check-ins — then see patterns, plateaus, and a weekly intelligence report. All privacy-first, on your device.
         </p>
         <div class="flex flex-wrap gap-4 mb-8">
-          <a href="#download" class="btn-primary">
+          <a href="https://apps.apple.com/in/app/glp-1-weight-tracker-wellion/id6761417472" target="_blank" rel="noopener" class="btn-primary">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
             App Store
           </a>
-          <a href="#download" class="btn-secondary">
+          <a href="https://play.google.com/store/apps/details?id=com.deep125.wellion&hl=en_IN" target="_blank" rel="noopener" class="btn-secondary">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 12l2.302-3.192zM5.864 3.458L16.8 9.79l-2.302 2.302-8.635-8.635z"/></svg>
             Google Play
           </a>
         </div>
-        <div class="flex items-center gap-6 text-sm text-charcoalLight">
+        <div class="flex items-center gap-6 text-sm text-textSecondary">
           <span class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             Free to start
@@ -182,7 +184,36 @@
       </div>
       <div class="fade-up fade-up-d2 flex justify-center">
         <div class="float">
-          <img src="./app-mockup.png" alt="Wellion app screenshots" class="w-full max-w-lg drop-shadow-2xl" width="700" height="512" />
+          <img src="./ss1.png" alt="Wellion progress photos before and after" class="w-full max-w-[280px] sm:max-w-sm rounded-[2.5rem] drop-shadow-2xl border-8 border-white max-h-[35rem] h-auto" style="border-color:rgba(255,255,255,0.8);" width="375" height="812" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="py-24 px-6 relative overflow-hidden" style="background:rgba(218,241,222,0.4);">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 fade-up">
+        <div class="section-tag mb-4">See It In Action</div>
+        <h2 class="font-display text-4xl md:text-5xl text-text mb-4">A closer look</h2>
+        <p class="text-textSecondary max-w-2xl mx-auto">A few real screens from the app — logging, symptoms, progress, and Apple Health sync.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-up">
+        <div class="text-center">
+          <img src="./ss4.png" alt="Log Dose screen" class="w-full rounded-[1.5rem] drop-shadow-lg border-4 border-white mb-4" />
+          <p class="text-sm font-semibold text-text">Log Dose</p>
+        </div>
+        <div class="text-center">
+          <img src="./ss3.png" alt="Progress Photos screen" class="w-full rounded-[1.5rem] drop-shadow-lg border-4 border-white mb-4" />
+          <p class="text-sm font-semibold text-text">Progress Photos</p>
+        </div>
+        <div class="text-center">
+          <img src="./ss5.png" alt="Manage Symptoms screen" class="w-full rounded-[1.5rem] drop-shadow-lg border-4 border-white mb-4" />
+          <p class="text-sm font-semibold text-text">Manage Symptoms</p>
+        </div>
+        <div class="text-center">
+          <img src="./ss6.png" alt="Connect Apple Health screen" class="w-full rounded-[1.5rem] drop-shadow-lg border-4 border-white mb-4" />
+          <p class="text-sm font-semibold text-text">Apple Health Sync</p>
         </div>
       </div>
     </div>
@@ -193,92 +224,104 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16 fade-up">
         <div class="section-tag mb-4">Why Wellion</div>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal mb-4">From scattered notes to clear story</h2>
-        <p class="text-charcoalLight max-w-2xl mx-auto">Your GLP-1 journey generates important data every day. Wellion gives it structure and meaning.</p>
+        <h2 class="font-display text-4xl md:text-5xl text-text mb-4">From scattered notes to clear story</h2>
+        <p class="text-textSecondary max-w-2xl mx-auto">Your GLP-1 journey generates important data every day. Wellion gives it structure and meaning.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass-card rounded-2xl p-8 fade-up fade-up-d1 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background:#e5ebe7;">
-            <svg class="w-7 h-7 text-vitality" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <div class="glass-card rounded-2xl p-6 md:p-8 fade-up fade-up-d1 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background:#DAF1DE;">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h3 class="font-display text-xl text-charcoal mb-3">Scattered notes → One log</h3>
-          <p class="text-charcoalLight text-sm leading-relaxed">Stop juggling apps, notebooks, and memory. One structured place for doses, weight, and how you feel.</p>
+          <h3 class="font-display text-xl text-text mb-3">Scattered notes → One log</h3>
+          <p class="text-textSecondary text-sm leading-relaxed">Stop juggling apps, notebooks, and memory. One structured place for doses, weight, and how you feel.</p>
         </div>
-        <div class="glass-card rounded-2xl p-8 fade-up fade-up-d2 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background:#FFE4E6;">
-            <svg class="w-7 h-7 text-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        <div class="glass-card rounded-2xl p-6 md:p-8 fade-up fade-up-d2 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background:#E4F0EA;">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
           </div>
-          <h3 class="font-display text-xl text-charcoal mb-3">"Am I plateauing?" → Trend view</h3>
-          <p class="text-charcoalLight text-sm leading-relaxed">Premium pattern detection spots plateaus and trends you might miss, visualized in context over weeks.</p>
+          <h3 class="font-display text-xl text-text mb-3">"Am I plateauing?" → Trend view</h3>
+          <p class="text-textSecondary text-sm leading-relaxed">Premium pattern detection spots plateaus and trends you might miss, visualized in context over weeks.</p>
         </div>
-        <div class="glass-card rounded-2xl p-8 fade-up fade-up-d3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background:#e5ebe7;">
-            <svg class="w-7 h-7 text-sageDark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+        <div class="glass-card rounded-2xl p-6 md:p-8 fade-up fade-up-d3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background:#DAF1DE;">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
           </div>
-          <h3 class="font-display text-xl text-charcoal mb-3">"Is this normal?" → Side-effect view</h3>
-          <p class="text-charcoalLight text-sm leading-relaxed">See side-effect analytics over time with Premium — always paired with "talk to your clinician" guidance.</p>
+          <h3 class="font-display text-xl text-text mb-3">"Is this normal?" → Symptom check-ins</h3>
+          <p class="text-textSecondary text-sm leading-relaxed">Log nausea, fatigue, and other symptoms in seconds, with a custom list you control in Manage Symptoms.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section id="features" class="py-24 px-6" style="background:rgba(242,236,231,0.4);">
+  <section id="features" class="py-24 px-6" style="background:rgba(218,241,222,0.4);">
     <div class="max-w-6xl mx-auto" id="premium">
       <div class="text-center mb-16 fade-up">
         <div class="section-tag mb-4">Core Features</div>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal mb-4">Everything you need, nothing you don't</h2>
-        <p class="text-charcoalLight max-w-2xl mx-auto">Start free with powerful logging. Unlock deeper intelligence with Premium when you're ready.</p>
+        <h2 class="font-display text-4xl md:text-5xl text-text mb-4">Everything you need, nothing you don't</h2>
+        <p class="text-textSecondary max-w-2xl mx-auto">Start free with powerful logging. Unlock deeper intelligence with Premium when you're ready.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Free -->
-        <div class="glass-card rounded-3xl p-10 fade-up">
+        <div class="glass-card rounded-3xl p-6 sm:p-10 fade-up">
           <div class="flex items-center gap-3 mb-8">
-            <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center">
-              <svg class="w-5 h-5 text-sageDark" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <div class="w-10 h-10 rounded-full bg-mint flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             </div>
-            <h3 class="font-display text-2xl text-charcoal">Free Forever</h3>
+            <h3 class="font-display text-2xl text-text">Free Forever</h3>
           </div>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <div><span class="font-semibold text-charcoal">Dose logging</span><br><span class="text-sm text-charcoalLight">Tuned to your medication setup</span></div>
+              <div><span class="font-semibold text-text">Dose logging</span><br><span class="text-sm text-textSecondary">Injection site and pain level, tuned to your medication setup</span></div>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <div><span class="font-semibold text-charcoal">Weight &amp; progress charts</span><br><span class="text-sm text-charcoalLight">Visual history you can review with your doctor</span></div>
+              <div><span class="font-semibold text-text">Weight &amp; dose journey charts</span><br><span class="text-sm text-textSecondary">Visual history you can review with your doctor</span></div>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <div><span class="font-semibold text-charcoal">Daily check-ins</span><br><span class="text-sm text-charcoalLight">The story isn't only the number on the scale</span></div>
+              <div><span class="font-semibold text-text">Health check-ins</span><br><span class="text-sm text-textSecondary">Mood, hunger, and side effects — the story isn't only the number on the scale</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <div><span class="font-semibold text-text">Progress photos</span><br><span class="text-sm text-textSecondary">Before/after comparisons, stored on-device only</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <div><span class="font-semibold text-text">Custom symptom tracking</span><br><span class="text-sm text-textSecondary">Choose exactly which symptoms show up on check-in</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <div><span class="font-semibold text-text">Apple Health sync</span><br><span class="text-sm text-textSecondary">Steps, heart rate, sleep, and weight — no double logging</span></div>
             </li>
           </ul>
         </div>
         <!-- Premium -->
-        <div class="glass-card rounded-3xl p-10 fade-up fade-up-d2 relative overflow-hidden" style="border-color: rgba(249,115,22,0.3);">
-          <div class="absolute top-0 right-0 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl" style="background:linear-gradient(135deg,#f97316,#ea580c);">PREMIUM</div>
+        <div class="glass-card rounded-3xl p-6 sm:p-10 fade-up fade-up-d2 relative overflow-hidden" style="border-color: rgba(217,164,65,0.35);">
+          <div class="absolute top-0 right-0 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl" style="background:linear-gradient(135deg,#D9A441,#C98A3E);">PREMIUM</div>
           <div class="flex items-center gap-3 mb-8">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:#feeade;">
-              <svg class="w-5 h-5 text-vitality" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:#F5EAD2;">
+              <svg class="w-5 h-5" style="color:#D9A441;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <h3 class="font-display text-2xl text-charcoal">Wellion Premium</h3>
+            <h3 class="font-display text-2xl text-text">Wellion Premium</h3>
           </div>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-vitality mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <div><span class="font-semibold text-charcoal">Full Insights experience</span><br><span class="text-sm text-charcoalLight">Unlock the complete analytics dashboard</span></div>
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color:#D9A441;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <div><span class="font-semibold text-text">Full Insights experience</span><br><span class="text-sm text-textSecondary">Unlock the complete analytics dashboard</span></div>
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-vitality mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <div><span class="font-semibold text-charcoal">Plateau detection &amp; patterns</span><br><span class="text-sm text-charcoalLight">See what's really happening in your data</span></div>
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color:#D9A441;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <div><span class="font-semibold text-text">Plateau detection &amp; patterns</span><br><span class="text-sm text-textSecondary">See what's really happening in your data</span></div>
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-vitality mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <div><span class="font-semibold text-charcoal">Side-effect analytics</span><br><span class="text-sm text-charcoalLight">Track patterns over time, share with your clinician</span></div>
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color:#D9A441;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <div><span class="font-semibold text-text">Side-effect analytics</span><br><span class="text-sm text-textSecondary">Track patterns over time, share with your clinician</span></div>
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-vitality mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <div><span class="font-semibold text-charcoal">Weekly intelligence report</span><br><span class="text-sm text-charcoalLight">Your data tells a clearer story, every week</span></div>
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color:#D9A441;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <div><span class="font-semibold text-text">Weekly intelligence report</span><br><span class="text-sm text-textSecondary">Your data tells a clearer story, every week</span></div>
             </li>
           </ul>
         </div>
@@ -289,13 +332,13 @@
   <!-- PRIVACY -->
   <section id="privacy" class="py-24 px-6 relative">
     <div class="max-w-6xl mx-auto">
-      <div class="glass-card rounded-3xl p-12 md:p-16 text-center fade-up">
-        <div class="w-16 h-16 rounded-2xl bg-sage flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-sageDark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      <div class="glass-card rounded-3xl p-8 sm:p-12 md:p-16 text-center fade-up">
+        <div class="w-16 h-16 rounded-2xl bg-mint flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
         </div>
         <div class="section-tag mb-4">Your Data, Your Device</div>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal mb-6">Privacy isn't a feature. It's the architecture.</h2>
-        <p class="text-charcoalLight max-w-2xl mx-auto text-lg leading-relaxed mb-8">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-text mb-6">Privacy isn't a feature. It's the architecture.</h2>
+        <p class="text-textSecondary max-w-2xl mx-auto text-lg leading-relaxed mb-8">
           Wellion processes your health data on-device. No unnecessary sharing, no data brokering. Your biometrics stay where they belong — with you.
         </p>
         <a href="privacy.html" class="btn-secondary">Read our Privacy Policy →</a>
@@ -304,33 +347,33 @@
   </section>
 
   <!-- WHO IT'S FOR -->
-  <section class="py-24 px-6" style="background:rgba(242,236,231,0.4);">
+  <section class="py-24 px-6" style="background:rgba(218,241,222,0.4);">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16 fade-up">
         <div class="section-tag mb-4">Who It's For</div>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal mb-4">Same app, your reason</h2>
+        <h2 class="font-display text-4xl md:text-5xl text-text mb-4">Same app, your reason</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6 fade-up">
         <div class="glass-card rounded-2xl p-8 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div class="w-16 h-16 rounded-2xl bg-vitalityLight flex items-center justify-center mx-auto mb-5">
-            <svg class="w-8 h-8 text-vitality" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.97z"/></svg>
+          <div class="w-16 h-16 rounded-2xl bg-primaryLight flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.97z"/></svg>
           </div>
-          <h3 class="font-display text-xl text-charcoal mb-2">Weight-focused</h3>
-          <p class="text-sm text-charcoalLight">Track progress toward weight goals with medication context and trends over time.</p>
+          <h3 class="font-display text-xl text-text mb-2">Weight-focused</h3>
+          <p class="text-sm text-textSecondary">Track progress toward weight goals with medication context and trends over time.</p>
         </div>
         <div class="glass-card rounded-2xl p-8 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div class="w-16 h-16 rounded-2xl bg-coralLight flex items-center justify-center mx-auto mb-5">
-            <svg class="w-8 h-8 text-coral" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 5.56a2.25 2.25 0 01-2.065 1.378h-4.93a2.25 2.25 0 01-2.065-1.378L5 14.5m14 0H5"/></svg>
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:#F5EAD2;">
+            <svg class="w-8 h-8" style="color:#D9A441;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 5.56a2.25 2.25 0 01-2.065 1.378h-4.93a2.25 2.25 0 01-2.065-1.378L5 14.5m14 0H5"/></svg>
           </div>
-          <h3 class="font-display text-xl text-charcoal mb-2">Metabolic / Diabetes</h3>
-          <p class="text-sm text-charcoalLight">Log glucose, medication adherence, and daily patterns in a diabetes-friendly framework.</p>
+          <h3 class="font-display text-xl text-text mb-2">Metabolic / Diabetes</h3>
+          <p class="text-sm text-textSecondary">Log glucose, medication adherence, and daily patterns in a diabetes-friendly framework.</p>
         </div>
         <div class="glass-card rounded-2xl p-8 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div class="w-16 h-16 rounded-2xl bg-sage flex items-center justify-center mx-auto mb-5">
-            <svg class="w-8 h-8 text-sageDark" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+          <div class="w-16 h-16 rounded-2xl bg-mint flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
           </div>
-          <h3 class="font-display text-xl text-charcoal mb-2">General Wellness</h3>
-          <p class="text-sm text-charcoalLight">Build healthy habits, check in daily, and see how your routine shapes your results.</p>
+          <h3 class="font-display text-xl text-text mb-2">General Wellness</h3>
+          <p class="text-sm text-textSecondary">Build healthy habits, check in daily, and see how your routine shapes your results.</p>
         </div>
       </div>
     </div>
@@ -341,36 +384,36 @@
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-16 fade-up">
         <div class="section-tag mb-4">FAQ</div>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Common questions</h2>
+        <h2 class="font-display text-4xl md:text-5xl text-text">Common questions</h2>
       </div>
       <div class="space-y-4 fade-up">
         <details class="glass-card rounded-2xl p-6 group" open>
-          <summary class="font-semibold text-charcoal cursor-pointer flex items-center justify-between">
+          <summary class="font-semibold text-text cursor-pointer flex items-center justify-between">
             Is Wellion medical advice?
-            <svg class="w-5 h-5 text-charcoalLight transition-transform" style="transition:transform 0.3s;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-5 h-5 text-textSecondary transition-transform" style="transition:transform 0.3s;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="mt-3 text-charcoalLight text-sm leading-relaxed">No. Wellion is a tracking and insights tool, not medical advice. Always talk to your doctor before changing medication or treatment decisions.</p>
+          <p class="mt-3 text-textSecondary text-sm leading-relaxed">No. Wellion is a tracking and insights tool, not medical advice. Always talk to your doctor before changing medication or treatment decisions.</p>
         </details>
         <details class="glass-card rounded-2xl p-6 group">
-          <summary class="font-semibold text-charcoal cursor-pointer flex items-center justify-between">
+          <summary class="font-semibold text-text cursor-pointer flex items-center justify-between">
             What's included in Premium?
-            <svg class="w-5 h-5 text-charcoalLight" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-5 h-5 text-textSecondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="mt-3 text-charcoalLight text-sm leading-relaxed">Premium unlocks the full Insights tab, plateau detection &amp; patterns, side-effect analytics, and a weekly intelligence report. Free users get dose logging, weight charts, and daily check-ins.</p>
+          <p class="mt-3 text-textSecondary text-sm leading-relaxed">Premium unlocks the full Insights tab, plateau detection &amp; patterns, side-effect analytics, and a weekly intelligence report. Free users get dose logging, weight &amp; dose journey charts, health check-ins, progress photos, custom symptom tracking, and Apple Health sync.</p>
         </details>
         <details class="glass-card rounded-2xl p-6 group">
-          <summary class="font-semibold text-charcoal cursor-pointer flex items-center justify-between">
+          <summary class="font-semibold text-text cursor-pointer flex items-center justify-between">
             Do I need an account?
-            <svg class="w-5 h-5 text-charcoalLight" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-5 h-5 text-textSecondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="mt-3 text-charcoalLight text-sm leading-relaxed">No account needed to start logging. Your data stays on your device. An optional account enables backup and cross-device sync if you choose.</p>
+          <p class="mt-3 text-textSecondary text-sm leading-relaxed">No account needed to start logging. Your data stays on your device. An optional account enables backup and cross-device sync if you choose.</p>
         </details>
         <details class="glass-card rounded-2xl p-6 group">
-          <summary class="font-semibold text-charcoal cursor-pointer flex items-center justify-between">
+          <summary class="font-semibold text-text cursor-pointer flex items-center justify-between">
             Can I cancel anytime?
-            <svg class="w-5 h-5 text-charcoalLight" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-5 h-5 text-textSecondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="mt-3 text-charcoalLight text-sm leading-relaxed">Yes, cancel anytime through your App Store or Google Play subscription settings. You can also restore purchases on a new device.</p>
+          <p class="mt-3 text-textSecondary text-sm leading-relaxed">Yes, cancel anytime through your App Store or Google Play subscription settings. You can also restore purchases on a new device.</p>
         </details>
       </div>
     </div>
@@ -378,18 +421,18 @@
 
   <!-- DOWNLOAD CTA -->
   <section id="download" class="py-24 px-6 relative overflow-hidden">
-    <div class="gradient-blob bg-vitality" style="width:600px;height:600px;bottom:-200px;left:50%;transform:translateX(-50%);"></div>
+    <div class="gradient-blob bg-primary" style="width:600px;height:600px;bottom:-200px;left:50%;transform:translateX(-50%);"></div>
     <div class="max-w-4xl mx-auto relative z-10">
-      <div class="glass-dark rounded-3xl p-12 md:p-16 text-center">
-        <img src="./wellion-logo.png" alt="Wellion" width="64" height="64" class="mx-auto mb-6" />
-        <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Start your journey today</h2>
+      <div class="glass-dark rounded-3xl p-8 sm:p-12 md:p-16 text-center">
+        <img src="./logo.png" alt="Wellion" width="64" height="64" class="mx-auto mb-6" />
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-4">Start your journey today</h2>
         <p class="max-w-lg mx-auto mb-8" style="color:#9CA3AF;">Download Wellion free. Log your first dose, weight, or check-in — and see how calm tracking can feel.</p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="#" class="btn-primary">
+          <a href="https://apps.apple.com/in/app/glp-1-weight-tracker-wellion/id6761417472" target="_blank" rel="noopener" class="btn-primary">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
             App Store
           </a>
-          <a href="#" class="btn-secondary" style="border-color:rgba(255,255,255,0.2);color:#fff;background:rgba(255,255,255,0.1);">
+          <a href="https://play.google.com/store/apps/details?id=com.deep125.wellion&hl=en_IN" target="_blank" rel="noopener" class="btn-secondary" style="border-color:rgba(255,255,255,0.2);color:#fff;background:rgba(255,255,255,0.1);">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 12l2.302-3.192zM5.864 3.458L16.8 9.79l-2.302 2.302-8.635-8.635z"/></svg>
             Google Play
           </a>
@@ -399,27 +442,27 @@
   </section>
 
   <!-- DISCLAIMER -->
-  <section class="py-12 px-6" style="background:rgba(242,236,231,0.4);">
+  <section class="py-12 px-6" style="background:rgba(218,241,222,0.4);">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-sm text-charcoalLight leading-relaxed">
-        <strong class="text-charcoal">Important:</strong> Wellion is a tracking and insights tool, not medical advice. Always work with your clinician on medication and treatment decisions. Wellion does not diagnose, treat, cure, or prevent any disease.
+      <p class="text-sm text-textSecondary leading-relaxed">
+        <strong class="text-text">Important:</strong> Wellion is a tracking and insights tool, not medical advice. Always work with your clinician on medication and treatment decisions. Wellion does not diagnose, treat, cure, or prevent any disease.
       </p>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 px-6" style="border-top:1px solid rgba(229,231,235,0.5);">
+  <footer class="py-12 px-6" style="border-top:1px solid rgba(220,233,225,0.6);">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <img src="./wellion-logo.png" alt="Wellion" width="32" height="32" />
-        <span class="font-display text-lg text-charcoal">Wellion</span>
+        <img src="./logo.png" alt="Wellion" width="32" height="32" />
+        <span class="font-display text-lg text-text">Wellion</span>
       </div>
-      <div class="flex items-center gap-6 text-sm text-charcoalLight">
-        <a href="privacy.html" class="hover:text-vitality transition">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-vitality transition">Terms of Use</a>
-        <a href="support.html" class="hover:text-vitality transition">Support</a>
+      <div class="flex items-center gap-6 text-sm text-textSecondary">
+        <a href="privacy.html" class="hover:text-primary transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-primary transition">Terms of Use</a>
+        <a href="support.html" class="hover:text-primary transition">Support</a>
       </div>
-      <p class="text-xs" style="color:#9CA3AF;">© 2025 Wellion. All rights reserved.</p>
+      <p class="text-xs" style="color:#9CA3AF;">© 2026 Wellion. All rights reserved.</p>
     </div>
   </footer>
 
