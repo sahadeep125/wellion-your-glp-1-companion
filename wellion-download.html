@@ -8,6 +8,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1323906329892439');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1323906329892439&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
   :root{
     --bg: #F5FBF6;
@@ -21,19 +40,16 @@
   }
   *{ box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
   html,body{
-    height:100%;
     margin:0;
     background:var(--bg);
     color:var(--ink);
     font-family:'Plus Jakarta Sans',system-ui,sans-serif;
-    overscroll-behavior:none;
   }
   body{
     display:flex;
     flex-direction:column;
     min-height:100dvh;
-    padding: max(18px, env(safe-area-inset-top)) 20px max(18px, env(safe-area-inset-bottom));
-    overflow:hidden;
+    padding: max(18px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
   }
 
   /* subtle ambient backdrop */
@@ -57,7 +73,7 @@
     max-width:460px;
     width:100%;
     margin:0 auto;
-    min-height:0;
+    gap:28px;
   }
 
   /* ---- header / brand ---- */
@@ -84,13 +100,10 @@
   }
   .wordmark span{ color:var(--emerald); }
 
-  /* ---- hero / middle ---- */
+  /* ---- hero ---- */
   main{
-    flex:1;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    min-height:0;
     padding: 4px 0;
     gap:14px;
   }
@@ -140,6 +153,17 @@
     max-width:34ch;
   }
 
+  .privacy-line{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--emerald-dark);
+    margin:0;
+  }
+  .privacy-line svg{ width:16px; height:16px; flex-shrink:0; }
+
   /* trend motif card */
   .trend{
     margin-top:2px;
@@ -159,13 +183,132 @@
   .trend-copy .t1{ font-size:12.5px; font-weight:700; color:var(--ink); }
   .trend-copy .t2{ font-size:11.5px; color:var(--muted); }
 
-  /* ---- CTA area ---- */
-  .cta-zone{
+  /* ---- sections ---- */
+  section.block{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .block h2{
+    margin:0;
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:800;
+    font-size: clamp(19px, 5vw, 23px);
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .block .block-sub{
+    margin:0;
+    font-size:13.5px;
+    color:var(--muted);
+    line-height:1.45;
+  }
+
+  /* screenshots strip */
+  .shots{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:4px 4px 8px;
+    margin:0 -4px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .shots::-webkit-scrollbar{ display:none; }
+  .shot{
+    scroll-snap-align:start;
     flex-shrink:0;
     display:flex;
     flex-direction:column;
+    align-items:center;
+    gap:8px;
+    width:120px;
+  }
+  .shot img{
+    width:100%;
+    object-fit:cover;
+    object-position:top;
+    border-radius:18px;
+    border:4px solid var(--card);
+    box-shadow:0 10px 24px rgba(5,31,32,0.14);
+    background:var(--card);
+  }
+  .shot span{
+    font-size:12px;
+    font-weight:700;
+    color:var(--ink);
+    text-align:center;
+  }
+
+  /* how it works */
+  .steps{
+    display:flex;
+    flex-direction:column;
     gap:10px;
-    padding-top:10px;
+  }
+  .step{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    background:var(--card);
+    border:1px solid rgba(5,31,32,0.07);
+    border-radius:16px;
+    padding:12px 14px;
+    box-shadow:0 6px 18px rgba(5,31,32,0.05);
+  }
+  .step .num{
+    flex-shrink:0;
+    width:26px;height:26px;
+    border-radius:8px;
+    background:linear-gradient(155deg, var(--emerald), var(--emerald-dark));
+    color:#fff;
+    font-weight:800;
+    font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .step .step-copy{ line-height:1.35; padding-top:1px; }
+  .step .step-copy b{ font-size:13.5px; color:var(--ink); display:block; }
+  .step .step-copy small{ font-size:12.5px; color:var(--muted); }
+
+  /* testimonial */
+  .testimonial{
+    background:var(--card);
+    border:1px solid rgba(5,31,32,0.07);
+    border-radius:16px;
+    padding:16px 18px;
+    box-shadow:0 8px 24px rgba(5,31,32,0.06);
+  }
+  .testimonial p{
+    margin:0;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--emerald-dark);
+  }
+  .testimonial footer{
+    margin-top:8px;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* ---- CTA area ---- */
+  .cta-zone{
+    position:sticky;
+    bottom:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding-top:14px;
+    padding-bottom:6px;
+    background:linear-gradient(180deg, rgba(245,251,246,0) 0%, var(--bg) 28%);
+    z-index: 99;
   }
 
   .btn{
@@ -204,9 +347,6 @@
     margin:0;
   }
   .microcopy b{ color:var(--ink); font-weight:700; }
-  .pt-3{
-    padding-top: 1rem;
-  }
 
   [hidden]{ display:none !important; }
 
@@ -216,13 +356,6 @@
       from{ opacity:0; transform:translateY(10px); }
       to{ opacity:1; transform:translateY(0); }
     }
-  }
-
-  /* very short screens: tighten up so nothing scrolls */
-  @media (max-height: 620px){
-    main{ gap:10px; }
-    .trend{ display:none; }
-    h1{ font-size: clamp(24px, 7vw, 32px); }
   }
 </style>
 </head>
@@ -242,6 +375,11 @@
 
     <p class="sub">Log doses, weight, and how you feel in seconds — Wellion turns it into a clear picture of your progress.</p>
 
+    <p class="privacy-line">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#235347" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      Private by design — your data stays on your device.
+    </p>
+
     <div class="trend">
       <svg viewBox="0 0 64 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <polyline points="2,8 14,14 26,12 38,22 50,20 62,30" stroke="#235347" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
@@ -254,6 +392,43 @@
     </div>
   </main>
 
+  <section class="block">
+    <h2>A closer look</h2>
+    <p class="block-sub">Real screens from the app.</p>
+    <div class="shots">
+      <div class="shot"><img src="./ss1.png" alt="Home screen" loading="lazy" /><span>Dashboard</span></div>
+      <div class="shot"><img src="./ss3.png" alt="Progress Photos screen" loading="lazy" /><span>Progress Photos</span></div>
+      <div class="shot"><img src="./ss4.png" alt="Log Dose screen" loading="lazy" /><span>Log Dose</span></div>
+      <div class="shot"><img src="./ss5.png" alt="Manage Symptoms screen" loading="lazy" /><span>Manage Symptoms</span></div>
+      <div class="shot"><img src="./ss6.png" alt="Connect Apple Health screen" loading="lazy" /><span>Apple Health Sync</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="step-copy"><b>Log in seconds</b><small>Dose, weight, or a quick check-in — whatever's on your mind today.</small></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="step-copy"><b>See the trend</b><small>One timeline turns scattered entries into a clear picture.</small></div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="step-copy"><b>Get the weekly picture</b><small>A calm summary of your progress, ready when you want it.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="testimonial">
+      <p>"Finally, one quiet place to log everything instead of juggling notes and screenshots."</p>
+      <footer>Early Wellion user</footer>
+    </div>
+  </section>
+
   <div class="cta-zone">
     <a id="btn-ios" class="btn" href="https://apps.apple.com/in/app/glp-1-weight-tracker-wellion/id6761417472" hidden>
       <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M16.365 1.43c0 1.14-.462 2.24-1.207 3.05-.827.9-2.19 1.6-3.29 1.51-.14-1.11.42-2.27 1.16-3.03.83-.86 2.25-1.5 3.26-1.53.02.003.06.007.077 0zM20.6 17.13c-.52 1.18-.77 1.71-1.44 2.75-.94 1.45-2.26 3.26-3.9 3.27-1.46.02-1.83-.95-3.81-.94-1.98.01-2.4.96-3.86.94-1.64-.02-2.89-1.65-3.83-3.1-2.63-4.05-2.9-8.8-1.28-11.32 1.15-1.8 2.97-2.85 4.68-2.85 1.74 0 2.84 1 4.28 1 1.4 0 2.25-1 4.28-1 1.53 0 3.14.83 4.29 2.27-3.77 2.06-3.16 7.44.6 9z"/></svg>
@@ -264,9 +439,9 @@
       <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M3.6 2.6c-.4.3-.6.8-.6 1.4v16c0 .6.2 1.1.6 1.4l.1.1L13 12v-.1L3.7 2.5l-.1.1zM16 8.6l-2.5-1.4L15 5.7l3.6 2c.5.3.5 1 0 1.3l-3.6 2-1.5-1.5 2.5-1zM13 12.1v-.2l2.5 1.4-2 1.1-2.5-1.4 2-.9zM13 11.9l-2.5-1.4L13 9.1v2.8z"/><path d="M13 12L3.7 21.5c.2.2.6.3.9.3.3 0 .6-.1.9-.2l10.6-6.1L13 12zM13 12l3.1-3.5-10.6-6C5.2 2.4 4.8 2.3 4.5 2.3c-.3 0-.6.1-.8.3L13 12z"/></svg>
       Get it on Google Play
     </a>
-  </div>
 
-  <p class="microcopy pt-3">Free to download · <b>iPhone &amp; Android</b></p>
+    <p class="microcopy">Free to download · <b>iPhone &amp; Android</b></p>
+  </div>
 
 </div>
 
@@ -287,25 +462,22 @@
     var iosBtn = document.getElementById("btn-ios");
     var androidBtn = document.getElementById("btn-android");
 
-    if (os === "ios") {
-      iosBtn.hidden = false;
-    } else if (os === "android") {
-      androidBtn.hidden = false;
+    iosBtn.hidden = false;
+    androidBtn.hidden = false;
+
+    if (os === "android") {
+      iosBtn.classList.add("secondary");
     } else {
-      iosBtn.hidden = false;
-      androidBtn.hidden = false;
       androidBtn.classList.add("secondary");
     }
 
-    setTimeout(function(){
-      if (os === "ios") {
-        window.location.href = iosBtn.href;
-      } else if (os === "android") {
-        window.location.href = androidBtn.href;
-      } else {
-        window.location.href = "./index.html";
+    function trackDownloadClick(store){
+      if (typeof fbq === "function") {
+        fbq("trackCustom", "DownloadClick", { store: store });
       }
-    }, 8000);
+    }
+    iosBtn.addEventListener("click", function(){ trackDownloadClick("ios"); });
+    androidBtn.addEventListener("click", function(){ trackDownloadClick("android"); });
   })();
 </script>
 
